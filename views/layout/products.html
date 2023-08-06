@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typistial - Products</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header__inner">
+                <a href="/index.html" class="logo flex"><img src="/assets/images/logo.svg" alt=""><span>TYPISTIAL</span></a>
+                <nav class="header-nav center-nav">
+                    <ul class="flex" style="gap: 30px">
+                        <li class="nav__item">
+                            <a href="/index.html" class="nav__link">TRANG CHỦ
+                                <span class="header__line"></span>
+                            </a>  
+                        </li>
+                        <li class="nav__item ">
+                            <a class="nav__link toggle__subnav">SẢN PHẨM</a>
+                            <nav class="subnav__wrapper">
+                                <ul class="subnav">
+                                    <li class="nav__item">
+                                        <a href="" class="nav__link">CATEGORIES</a>
+                                        <ul>
+                                            <li class="nav__item"><a class="nav__link" href="">IN STOCK</a></li>
+                                            <li class="nav__item"><a class="nav__link" href="">KEYBOARDS</a></li>
+                                            <li class="nav__item"><a class="nav__link" href="">KITS</a></li>
+                                            <li class="nav__item"><a class="nav__link" href="/html/switches.html">SWITCHES</a>
+                                            </li>
+                                            <li class="nav__item"><a class="nav__link" href="/html/keycaps.html">KEYCAPS</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav__item"><a href="/html/keycaps.html" class="nav__link">KEYCAPS</a>
+                                        <ul>
+                                            <li class="nav__item"><a class="nav__link" href="">GMK DUALSHOT® 2 Keycaps</a></li>
+                                            <li class="nav__item"><a class="nav__link" href="">OTC Modo® Light Keycaps</a></li>
+                                            <li class="nav__item"><a class="nav__link" href="">GMK Norse Keycap Set</a></li>
+                                            <li class="nav__item"><a class="nav__link" href="">GMK 8008 2 Keycap Set</a></li>
+                                            <li class="nav__item"><a class="nav__link" href="">OTC 9009 Keycaps</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav__item"><a href="/html/kits.html" class="nav__link">KITS</a>
+                                        <ul>
+                                            <li class="nav__item"><a class="nav__link" href="">SPR 67 Kit</a></li>
+                                            <li class="nav__item"><a class="nav__link" href="">ACR TOP 75 Kit</a></li>
+                                            <li class="nav__item"><a class="nav__link" href="">5075S Kit</a></li>
+                                            <li class="nav__item"><a class="nav__link" href="">ACR Pro Alice Plus Kit</a></li>
+                                            <li class="nav__item"><a class="nav__link" href="">ACR Pro 75 Kit</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav__item"><a href="/html/switches.html" class="nav__link">SWITCHES</a>
+                                        <ul>
+                                            <li class="nav__item"><a class="nav__link" href="/html/milky-pro.html">Gateron KS-3
+                                                    Milky Pro Switch Set</a></li>
+                                            <li class="nav__item"><a class="nav__link" href="">Gateron Ink V2 Switch Set</a>
+                                            </li>
+                                            <li class="nav__item"><a class="nav__link" href="">Gateron Cap V2 Switch Set</a>
+                                            </li>
+                                            <li class="nav__item"><a class="nav__link" href="">Gateron Box CJ Linear Switch
+                                                    Set</a></li>
+                                            <li class="nav__item"><a class="nav__link" href="">Gateron Box Ink V2 Switch Set</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav__item"><a href="/html/pre-built.html" class="nav__link">PRE-BUILT
+                                            KEYBOARDS</a>
+                                        <ul>
+                                            <li class="nav__item"><a class="nav__link" href="">IQUNIX OG80 Wormhole Wireless</a>
+                                            </li>
+                                            <li class="nav__item"><a class="nav__link" href="">IQUNIX L80 Formula Typing
+                                                    Wireless</a></li>
+                                            <li class="nav__item"><a class="nav__link" href="">Keychron Q8 (Alice Layout)
+                                                    QMK</a></li>
+                                            <li class="nav__item"><a class="nav__link" href="">AKKO Black&Cyan 5075B Plus</a>
+                                            </li>
+                                            <li class="nav__item"><a class="nav__link" href="">AKKO Dracula Castle 5075B
+                                                    Plus</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </li>
+                        <li class="nav__item"><a href="" class="nav__link">LIÊN HỆ</a></li>
+                        <li class="nav__item"><a href="/html/about-us.html" class="nav__link">VỀ CHÚNG TÔI</a></li>
+                    </ul>
+                </nav>
+                <nav class="header-nav right__nav">
+                    <ul class="flex">
+                        <li class="nav__item">
+                            <!-- expand search-bar -->
+                            <div class="search-bar">
+                                <input type="text" name="searchbar" placeholder="Search..." class="bar">
+                                <i class="fa-solid fa-magnifying-glass magni-icon" style="cursor: pointer;"></i>
+                            </div>
+                        </li>
+                        <li class="nav__item"><a href="/html/log-in.html" class="nav__link">
+                                <i class="fa-solid fa-user"></i></a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="/html/cart.html" class="nav__link"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="header-nav respon-bar-icon flex">
+                    <li class="nav__item">
+                        <!-- expand search-bar -->
+                        <div class="search-bar">
+                            <input type="text" name="searchbar" placeholder="Search..." class="bar">
+                            <i class="fa-solid fa-magnifying-glass magni-icon" style="cursor: pointer;"></i>
+                        </div>
+                    </li>
+                    <li class="nav__item">
+                        <i class="fa-solid fa-bars open-btn"></i>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- respon nav bar -->
+        <div class="respon-nav">
+            <div class="respon-nav__icons">
+                <ul class="respon-left-nav flex">
+                    <li class="nav__item">
+                        <a href="/html/index.html" class="nav__link"><i class="fa-solid fa-home"></i></a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/html/log-in.html" class="nav__link"><i class="fa-solid fa-user"></i></a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/html/cart.html" class="nav__link"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                </ul>
+                <i class="fa-solid fa-bars respon-bar-icon close-btn"></i>
+            </div>
+            <ul class="respon-nav__content">
+                <li class="nav__item">
+                    <a href="/html/pre-built.html" class="nav__link">Keyboards</a>
+                </li>
+                <li class="nav__item">
+                    <a href="/html/switches.html" class="nav__link">Switches</a>
+                </li>
+                <li class="nav__item">
+                    <a href="/html/keycaps.html" class="nav__link">Keycaps</a>
+                </li>
+                <li class="nav__item">
+                    <a href="/html/kits.html" class="nav__link">Kits</a>
+                </li>
+                <li class="nav__item">
+                    <a href="" class="nav__link">Deskpads</a>
+                </li>
+            </ul>
+        </div>
+        <!-- respon overlay -->
+        <div class="respon-overlay"></div>
+        <h1 class="big-text">PRODUCTS</h1>
+        <main class="section all-product">
+            <div class="product__main__wrapper" style="padding: 0; padding-top: 200px">
+                <div class="main__inner">
+                    <div class="filter__nav flex">
+                        <!-- product filter start -->
+                        <div class="product__filter cate__filter flex">
+                            <span><i class="fa-solid fa-filter"></i> Filter</span>
+                            <div class="dropdown-select product__dropdown">
+                                <div class="select__option active toggle__select toggle__kind"><span>All</span><i class="fa-solid fa-chevron-down"></i></div>
+                                <ul class="select-option__list">
+                                    <li class="select__option selected">All</li>
+                                    <li class="select__option">Product name A - Z</li>
+                                    <li class="select__option">Product name Z - A</li>
+                                    <li class="select__option">Price highest - lowest</li>
+                                    <li class="select__option">Price lowest - highest</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- product filter end -->
+                        <!-- product per page select box start -->
+                        <div class="product__filter amount__select flex">
+                            <span>Show</span>
+                            <div class="dropdown-select amount__dropdown">
+                                <div class="select__option active toggle__select toggle__amount">
+                                    <span>9</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                                <ul class="select-option__list">
+                                    <li class="select__option selected">9</li>
+                                    <li class="select__option">15</li>
+                                    <li class="select__option">20</li>
+                                    <li class="select__option">50</li>
+                                    <li class="select__option">100</li>
+                                </ul>
+                            </div>
+                            <span>per page</span>
+                        </div>
+                        <!-- product per page select box end -->
+                    </div>
+                    <section class="product__section flex">
+                        <div class="product__sidebar">
+                            <nav>   
+                                <h4 class="sidebar-nav__title">Category</h4>
+                                <ul class="product-sidebar__nav">
+                                    <li class="sidebar-nav__item">
+                                        <a href="" class="sidebar-nav__link">Keyboard</a>
+                                        <span class="item__qty">219</span>
+                                    </li>
+                                    <li class="sidebar-nav__item">
+                                        <a href="" class="sidebar-nav__link">Keycaps</a>
+                                        <span class="item__qty">192</span>
+                                    </li>
+                                    <li class="sidebar-nav__item">
+                                        <a href="" class="sidebar-nav__link">Switches</a>
+                                        <span class="item__qty">80</span>
+                                    </li>
+                                    <li class="sidebar-nav__item">
+                                        <a href="" class="sidebar-nav__link">Kit</a>
+                                        <span class="item__qty">141</span>
+                                    </li>
+                                    <li class="sidebar-nav__item">
+                                        <a href="" class="sidebar-nav__link">Deskpad</a>
+                                        <span class="item__qty">57</span>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <nav>   
+                                <h4 class="sidebar-nav__title">Price</h4>
+                                <ul class="product-sidebar__nav">
+                                    <li class="sidebar-nav__item">
+                                        <a href="" class="sidebar-nav__link">$5 - $99</a>
+                                        <span class="item__qty">321</span>
+                                    </li>
+                                    <li class="sidebar-nav__item">
+                                        <a href="" class="sidebar-nav__link">$100 - $199</a>
+                                        <span class="item__qty">192</span>
+                                    </li>   
+                                    <li class="sidebar-nav__item">
+                                        <a href="" class="sidebar-nav__link">$200 - $399</a>
+                                        <span class="item__qty">80</span>
+                                    </li>
+                                    <li class="sidebar-nav__item">
+                                        <a href="" class="sidebar-nav__link">$400 - $500</a>
+                                        <span class="item__qty">141</span>
+                                    </li>
+                                    <li class="sidebar-nav__item">
+                                        <a href="" class="sidebar-nav__link">Upper $500</a>
+                                        <span class="item__qty">57</span>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="sidebar__banner">
+                                <div class="text__center">
+                                    <h4 class="text__label">COMING SUMMER 2023</h4>
+                                    <h2 class="text-spotlight">BAUER™ LITE
+KEYBOARD</h2>
+                                    <div class="banner__btn">EXPLORE NOW</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-wrapper" style="max-width: 960px">
+                            <div class="product">
+                                <a href="" class="product__banner">
+                                    <img src="/assets/images/Ocean-Star-SAL-768x768.jpg" alt="">
+                                    <div class="overlay">
+                                        <div class="buttons-set">
+                                            <a href="" class="btn add__btn"><i class="fa-solid fa-plus"></i> Xem sau</a>
+                                            
+                                            <a href="" class="btn buy__btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M13.25 7.25V4.95C13.25 3.8299 13.25 3.26984 13.032 2.84202C12.8403 2.46569 12.5343 2.15973 12.158 1.96799C11.7301 1.75 11.1701 1.75 10.05 1.75H9.94999C8.82988 1.75 8.26983 1.75 7.842 1.96799C7.46568 2.15973 7.15972 2.46569 6.96797 2.84202C6.74998 3.26984 6.74998 3.8299 6.74998 4.95V7.25M6.19579 18.25H13.8042C15.0014 18.25 15.6 18.25 16.0436 18.0114C16.4334 17.8018 16.7427 17.4688 16.923 17.0646C17.1281 16.6046 17.0839 16.0076 16.9954 14.8136L16.4695 7.71361C16.3921 6.66903 16.3534 6.14675 16.1253 5.75104C15.9244 5.40263 15.6232 5.12288 15.2609 4.94829C14.8494 4.75 14.3257 4.75 13.2783 4.75H6.72171C5.67428 4.75 5.15056 4.75 4.73908 4.94829C4.37679 5.12288 4.07554 5.40263 3.87466 5.75104C3.64652 6.14675 3.60783 6.66903 3.53046 7.71361L3.00453 14.8136C2.91609 16.0076 2.87187 16.6046 3.07701 17.0646C3.25728 17.4688 3.56653 17.8018 3.95633 18.0114C4.39993 18.25 4.99855 18.25 6.19579 18.25Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                                                Mua ngay
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="product__detail">
+                                    <h2 class="product__name">Ocean-Star Keycap ABS SAL Set(195-Key)</h2>
+                                    <div class="flex" style="width: 100%">
+                                        <h4 class="product__price"> $749.25 </h4>
+                                        <div class="product__info">
+                                            <div>(124 đã bán)</div>
+                                            <div>4.3 <i class="fa-solid fa-star"></i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product">
+                                <a href="" class="product__banner">
+                                    <img src="/assets/images/Akko-Keycap-Set-Collection-Box-768x768.jpg" alt="">
+                                    <div class="overlay">
+                                        <div class="buttons-set">
+                                            <a href="" class="btn add__btn"><i class="fa-solid fa-plus"></i> Xem sau</a>
+                                            <a href="" class="btn buy__btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M13.25 7.25V4.95C13.25 3.8299 13.25 3.26984 13.032 2.84202C12.8403 2.46569 12.5343 2.15973 12.158 1.96799C11.7301 1.75 11.1701 1.75 10.05 1.75H9.94999C8.82988 1.75 8.26983 1.75 7.842 1.96799C7.46568 2.15973 7.15972 2.46569 6.96797 2.84202C6.74998 3.26984 6.74998 3.8299 6.74998 4.95V7.25M6.19579 18.25H13.8042C15.0014 18.25 15.6 18.25 16.0436 18.0114C16.4334 17.8018 16.7427 17.4688 16.923 17.0646C17.1281 16.6046 17.0839 16.0076 16.9954 14.8136L16.4695 7.71361C16.3921 6.66903 16.3534 6.14675 16.1253 5.75104C15.9244 5.40263 15.6232 5.12288 15.2609 4.94829C14.8494 4.75 14.3257 4.75 13.2783 4.75H6.72171C5.67428 4.75 5.15056 4.75 4.73908 4.94829C4.37679 5.12288 4.07554 5.40263 3.87466 5.75104C3.64652 6.14675 3.60783 6.66903 3.53046 7.71361L3.00453 14.8136C2.91609 16.0076 2.87187 16.6046 3.07701 17.0646C3.25728 17.4688 3.56653 17.8018 3.95633 18.0114C4.39993 18.25 4.99855 18.25 6.19579 18.25Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                                                Mua ngay
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="product__detail">
+                                    <h2 class="product__name">Akko Keycap Set Collection Box</h2>
+                                    <div class="flex" style="width: 100%">
+                                        <h4 class="product__price"> $749.25 </h4>
+                                        <div class="product__info">
+                                            <div>(124 đã bán)</div>
+                                            <div>4.3 <i class="fa-solid fa-star"></i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product">
+                                <a href="" class="product__banner">
+                                    <img src="/assets/images/Marrs-Green-X-768x768.jpg" alt="">
+                                    <div class="overlay">
+                                        <div class="buttons-set">
+                                            <a href="" class="btn add__btn"><i class="fa-solid fa-plus"></i> Xem sau</a>
+                                            <a href="" class="btn buy__btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M13.25 7.25V4.95C13.25 3.8299 13.25 3.26984 13.032 2.84202C12.8403 2.46569 12.5343 2.15973 12.158 1.96799C11.7301 1.75 11.1701 1.75 10.05 1.75H9.94999C8.82988 1.75 8.26983 1.75 7.842 1.96799C7.46568 2.15973 7.15972 2.46569 6.96797 2.84202C6.74998 3.26984 6.74998 3.8299 6.74998 4.95V7.25M6.19579 18.25H13.8042C15.0014 18.25 15.6 18.25 16.0436 18.0114C16.4334 17.8018 16.7427 17.4688 16.923 17.0646C17.1281 16.6046 17.0839 16.0076 16.9954 14.8136L16.4695 7.71361C16.3921 6.66903 16.3534 6.14675 16.1253 5.75104C15.9244 5.40263 15.6232 5.12288 15.2609 4.94829C14.8494 4.75 14.3257 4.75 13.2783 4.75H6.72171C5.67428 4.75 5.15056 4.75 4.73908 4.94829C4.37679 5.12288 4.07554 5.40263 3.87466 5.75104C3.64652 6.14675 3.60783 6.66903 3.53046 7.71361L3.00453 14.8136C2.91609 16.0076 2.87187 16.6046 3.07701 17.0646C3.25728 17.4688 3.56653 17.8018 3.95633 18.0114C4.39993 18.25 4.99855 18.25 6.19579 18.25Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                                                Mua ngay
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="product__detail">
+                                    <h2 class="product__name">Marrs Green Keycap Set(184-key)</h2>
+                                    <div class="flex" style="width: 100%">
+                                        <h4 class="product__price"> $749.25 </h4>
+                                        <div class="product__info">
+                                            <div>(124 đã bán)</div>
+                                            <div>4.3 <i class="fa-solid fa-star"></i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product">
+                                <a href="" class="product__banner">
+                                    <img src="/assets/images/WOB-AZ-768x768.jpg" alt="">
+                                    <div class="overlay">
+                                        <div class="buttons-set">
+                                            <a href="" class="btn add__btn"><i class="fa-solid fa-plus"></i> Xem sau</a>
+                                            <a href="" class="btn buy__btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M13.25 7.25V4.95C13.25 3.8299 13.25 3.26984 13.032 2.84202C12.8403 2.46569 12.5343 2.15973 12.158 1.96799C11.7301 1.75 11.1701 1.75 10.05 1.75H9.94999C8.82988 1.75 8.26983 1.75 7.842 1.96799C7.46568 2.15973 7.15972 2.46569 6.96797 2.84202C6.74998 3.26984 6.74998 3.8299 6.74998 4.95V7.25M6.19579 18.25H13.8042C15.0014 18.25 15.6 18.25 16.0436 18.0114C16.4334 17.8018 16.7427 17.4688 16.923 17.0646C17.1281 16.6046 17.0839 16.0076 16.9954 14.8136L16.4695 7.71361C16.3921 6.66903 16.3534 6.14675 16.1253 5.75104C15.9244 5.40263 15.6232 5.12288 15.2609 4.94829C14.8494 4.75 14.3257 4.75 13.2783 4.75H6.72171C5.67428 4.75 5.15056 4.75 4.73908 4.94829C4.37679 5.12288 4.07554 5.40263 3.87466 5.75104C3.64652 6.14675 3.60783 6.66903 3.53046 7.71361L3.00453 14.8136C2.91609 16.0076 2.87187 16.6046 3.07701 17.0646C3.25728 17.4688 3.56653 17.8018 3.95633 18.0114C4.39993 18.25 4.99855 18.25 6.19579 18.25Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                                                Mua ngay
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="product__detail">
+                                    <h2 class="product__name">WOB Building Blocks Keycap Set(282-Key)</h2>
+                                    <div class="flex" style="width: 100%">
+                                        <h4 class="product__price"> $749.25 </h4>
+                                        <div class="product__info">
+                                            <div>(124 đã bán)</div>
+                                            <div>4.3 <i class="fa-solid fa-star"></i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product">
+                                <a href="" class="product__banner">
+                                    <img src="/assets/images/Cream-AZ-768x768.jpg" alt="">
+                                    <div class="overlay">
+                                        <div class="buttons-set">
+                                            <a href="" class="btn add__btn"><i class="fa-solid fa-plus"></i> Xem sau</a>
+                                            <a href="" class="btn buy__btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M13.25 7.25V4.95C13.25 3.8299 13.25 3.26984 13.032 2.84202C12.8403 2.46569 12.5343 2.15973 12.158 1.96799C11.7301 1.75 11.1701 1.75 10.05 1.75H9.94999C8.82988 1.75 8.26983 1.75 7.842 1.96799C7.46568 2.15973 7.15972 2.46569 6.96797 2.84202C6.74998 3.26984 6.74998 3.8299 6.74998 4.95V7.25M6.19579 18.25H13.8042C15.0014 18.25 15.6 18.25 16.0436 18.0114C16.4334 17.8018 16.7427 17.4688 16.923 17.0646C17.1281 16.6046 17.0839 16.0076 16.9954 14.8136L16.4695 7.71361C16.3921 6.66903 16.3534 6.14675 16.1253 5.75104C15.9244 5.40263 15.6232 5.12288 15.2609 4.94829C14.8494 4.75 14.3257 4.75 13.2783 4.75H6.72171C5.67428 4.75 5.15056 4.75 4.73908 4.94829C4.37679 5.12288 4.07554 5.40263 3.87466 5.75104C3.64652 6.14675 3.60783 6.66903 3.53046 7.71361L3.00453 14.8136C2.91609 16.0076 2.87187 16.6046 3.07701 17.0646C3.25728 17.4688 3.56653 17.8018 3.95633 18.0114C4.39993 18.25 4.99855 18.25 6.19579 18.25Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                                                Mua ngay
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="product__detail">
+                                    <h2 class="product__name">Cream Keycap Set(282-Key)</h2>
+                                    <div class="flex" style="width: 100%">
+                                        <h4 class="product__price"> $749.25 </h4>
+                                        <div class="product__info">
+                                            <div>(124 đã bán)</div>
+                                            <div>4.3 <i class="fa-solid fa-star"></i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product">
+                                <a href="" class="product__banner">
+                                    <img src="/assets/images/Cool-Gray-AZ-768x768.jpg" alt="">
+                                    <div class="overlay">
+                                        <div class="buttons-set">
+                                            <a href="" class="btn add__btn"><i class="fa-solid fa-plus"></i> Xem sau</a>
+                                            <a href="" class="btn buy__btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M13.25 7.25V4.95C13.25 3.8299 13.25 3.26984 13.032 2.84202C12.8403 2.46569 12.5343 2.15973 12.158 1.96799C11.7301 1.75 11.1701 1.75 10.05 1.75H9.94999C8.82988 1.75 8.26983 1.75 7.842 1.96799C7.46568 2.15973 7.15972 2.46569 6.96797 2.84202C6.74998 3.26984 6.74998 3.8299 6.74998 4.95V7.25M6.19579 18.25H13.8042C15.0014 18.25 15.6 18.25 16.0436 18.0114C16.4334 17.8018 16.7427 17.4688 16.923 17.0646C17.1281 16.6046 17.0839 16.0076 16.9954 14.8136L16.4695 7.71361C16.3921 6.66903 16.3534 6.14675 16.1253 5.75104C15.9244 5.40263 15.6232 5.12288 15.2609 4.94829C14.8494 4.75 14.3257 4.75 13.2783 4.75H6.72171C5.67428 4.75 5.15056 4.75 4.73908 4.94829C4.37679 5.12288 4.07554 5.40263 3.87466 5.75104C3.64652 6.14675 3.60783 6.66903 3.53046 7.71361L3.00453 14.8136C2.91609 16.0076 2.87187 16.6046 3.07701 17.0646C3.25728 17.4688 3.56653 17.8018 3.95633 18.0114C4.39993 18.25 4.99855 18.25 6.19579 18.25Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                                                Mua ngay
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="product__detail">
+                                    <h2 class="product__name">Cool Gray Keycap Set(132-key)</h2>
+                                    <div class="flex" style="width: 100%">
+                                        <h4 class="product__price"> $749.25 </h4>
+                                        <div class="product__info">
+                                            <div>(124 đã bán)</div>
+                                            <div>4.3 <i class="fa-solid fa-star"></i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product">
+                                <a href="" class="product__banner">
+                                    <img src="/assets/images/Warm-Gray-AZ-768x768.jpg" alt="">
+                                    <div class="overlay">
+                                        <div class="buttons-set">
+                                            <a href="" class="btn add__btn"><i class="fa-solid fa-plus"></i> Xem sau</a>
+                                            <a href="" class="btn buy__btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M13.25 7.25V4.95C13.25 3.8299 13.25 3.26984 13.032 2.84202C12.8403 2.46569 12.5343 2.15973 12.158 1.96799C11.7301 1.75 11.1701 1.75 10.05 1.75H9.94999C8.82988 1.75 8.26983 1.75 7.842 1.96799C7.46568 2.15973 7.15972 2.46569 6.96797 2.84202C6.74998 3.26984 6.74998 3.8299 6.74998 4.95V7.25M6.19579 18.25H13.8042C15.0014 18.25 15.6 18.25 16.0436 18.0114C16.4334 17.8018 16.7427 17.4688 16.923 17.0646C17.1281 16.6046 17.0839 16.0076 16.9954 14.8136L16.4695 7.71361C16.3921 6.66903 16.3534 6.14675 16.1253 5.75104C15.9244 5.40263 15.6232 5.12288 15.2609 4.94829C14.8494 4.75 14.3257 4.75 13.2783 4.75H6.72171C5.67428 4.75 5.15056 4.75 4.73908 4.94829C4.37679 5.12288 4.07554 5.40263 3.87466 5.75104C3.64652 6.14675 3.60783 6.66903 3.53046 7.71361L3.00453 14.8136C2.91609 16.0076 2.87187 16.6046 3.07701 17.0646C3.25728 17.4688 3.56653 17.8018 3.95633 18.0114C4.39993 18.25 4.99855 18.25 6.19579 18.25Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                                                Mua ngay
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="product__detail">
+                                    <h2 class="product__name">Warm Gray Keycap Set(132-key)</h2>
+                                    <div class="flex" style="width: 100%">
+                                        <h4 class="product__price"> $749.25 </h4>
+                                        <div class="product__info">
+                                            <div>(124 đã bán)</div>
+                                            <div>4.3 <i class="fa-solid fa-star"></i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product">
+                                <a href="" class="product__banner">
+                                    <img src="/assets/images/ASA-Shine-AZ-768x768.jpg" alt="">
+                                    <div class="overlay">
+                                        <div class="buttons-set">
+                                            <a href="" class="btn add__btn"><i class="fa-solid fa-plus"></i> Xem sau</a>
+                                            <a href="" class="btn buy__btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M13.25 7.25V4.95C13.25 3.8299 13.25 3.26984 13.032 2.84202C12.8403 2.46569 12.5343 2.15973 12.158 1.96799C11.7301 1.75 11.1701 1.75 10.05 1.75H9.94999C8.82988 1.75 8.26983 1.75 7.842 1.96799C7.46568 2.15973 7.15972 2.46569 6.96797 2.84202C6.74998 3.26984 6.74998 3.8299 6.74998 4.95V7.25M6.19579 18.25H13.8042C15.0014 18.25 15.6 18.25 16.0436 18.0114C16.4334 17.8018 16.7427 17.4688 16.923 17.0646C17.1281 16.6046 17.0839 16.0076 16.9954 14.8136L16.4695 7.71361C16.3921 6.66903 16.3534 6.14675 16.1253 5.75104C15.9244 5.40263 15.6232 5.12288 15.2609 4.94829C14.8494 4.75 14.3257 4.75 13.2783 4.75H6.72171C5.67428 4.75 5.15056 4.75 4.73908 4.94829C4.37679 5.12288 4.07554 5.40263 3.87466 5.75104C3.64652 6.14675 3.60783 6.66903 3.53046 7.71361L3.00453 14.8136C2.91609 16.0076 2.87187 16.6046 3.07701 17.0646C3.25728 17.4688 3.56653 17.8018 3.95633 18.0114C4.39993 18.25 4.99855 18.25 6.19579 18.25Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                                                Mua ngay
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="product__detail">
+                                    <h2 class="product__name">ASA Shine-Through Keycap Set</h2>
+                                    <div class="flex" style="width: 100%">
+                                        <h4 class="product__price"> $749.25 </h4>
+                                        <div class="product__info">
+                                            <div>(124 đã bán)</div>
+                                            <div>4.3 <i class="fa-solid fa-star"></i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product">
+                                <a href="" class="product__banner">
+                                    <img src="/assets/images/ASA-Clear-AZ-768x768.jpg" alt="">
+                                    <div class="overlay">
+                                        <div class="buttons-set">
+                                            <a href="" class="btn add__btn"><i class="fa-solid fa-plus"></i> Xem sau</a>
+                                            <a href="" class="btn buy__btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M13.25 7.25V4.95C13.25 3.8299 13.25 3.26984 13.032 2.84202C12.8403 2.46569 12.5343 2.15973 12.158 1.96799C11.7301 1.75 11.1701 1.75 10.05 1.75H9.94999C8.82988 1.75 8.26983 1.75 7.842 1.96799C7.46568 2.15973 7.15972 2.46569 6.96797 2.84202C6.74998 3.26984 6.74998 3.8299 6.74998 4.95V7.25M6.19579 18.25H13.8042C15.0014 18.25 15.6 18.25 16.0436 18.0114C16.4334 17.8018 16.7427 17.4688 16.923 17.0646C17.1281 16.6046 17.0839 16.0076 16.9954 14.8136L16.4695 7.71361C16.3921 6.66903 16.3534 6.14675 16.1253 5.75104C15.9244 5.40263 15.6232 5.12288 15.2609 4.94829C14.8494 4.75 14.3257 4.75 13.2783 4.75H6.72171C5.67428 4.75 5.15056 4.75 4.73908 4.94829C4.37679 5.12288 4.07554 5.40263 3.87466 5.75104C3.64652 6.14675 3.60783 6.66903 3.53046 7.71361L3.00453 14.8136C2.91609 16.0076 2.87187 16.6046 3.07701 17.0646C3.25728 17.4688 3.56653 17.8018 3.95633 18.0114C4.39993 18.25 4.99855 18.25 6.19579 18.25Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                                                Mua ngay
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="product__detail">
+                                    <h2 class="product__name">ASA Clear Keycap Set(155-Key)</h2>
+                                    <div class="flex" style="width: 100%">
+                                        <h4 class="product__price"> $749.25 </h4>
+                                        <div class="product__info">
+                                            <div>(124 đã bán)</div>
+                                            <div>4.3 <i class="fa-solid fa-star"></i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product">
+                                <a href="" class="product__banner">
+                                    <img src="/assets/images/ASA-Clear-AZ-768x768.jpg" alt="">
+                                    <div class="overlay">
+                                        <div class="buttons-set">
+                                            <a href="" class="btn add__btn"><i class="fa-solid fa-plus"></i> Xem sau</a>
+                                            <a href="" class="btn buy__btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M13.25 7.25V4.95C13.25 3.8299 13.25 3.26984 13.032 2.84202C12.8403 2.46569 12.5343 2.15973 12.158 1.96799C11.7301 1.75 11.1701 1.75 10.05 1.75H9.94999C8.82988 1.75 8.26983 1.75 7.842 1.96799C7.46568 2.15973 7.15972 2.46569 6.96797 2.84202C6.74998 3.26984 6.74998 3.8299 6.74998 4.95V7.25M6.19579 18.25H13.8042C15.0014 18.25 15.6 18.25 16.0436 18.0114C16.4334 17.8018 16.7427 17.4688 16.923 17.0646C17.1281 16.6046 17.0839 16.0076 16.9954 14.8136L16.4695 7.71361C16.3921 6.66903 16.3534 6.14675 16.1253 5.75104C15.9244 5.40263 15.6232 5.12288 15.2609 4.94829C14.8494 4.75 14.3257 4.75 13.2783 4.75H6.72171C5.67428 4.75 5.15056 4.75 4.73908 4.94829C4.37679 5.12288 4.07554 5.40263 3.87466 5.75104C3.64652 6.14675 3.60783 6.66903 3.53046 7.71361L3.00453 14.8136C2.91609 16.0076 2.87187 16.6046 3.07701 17.0646C3.25728 17.4688 3.56653 17.8018 3.95633 18.0114C4.39993 18.25 4.99855 18.25 6.19579 18.25Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                                                Mua ngay
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="product__detail">
+                                    <h2 class="product__name">ASA Clear Keycap Set(155-Key)</h2>
+                                    <div class="flex" style="width: 100%">
+                                        <h4 class="product__price"> $749.25 </h4>
+                                        <div class="product__info">
+                                            <div>(124 đã bán)</div>
+                                            <div>4.3 <i class="fa-solid fa-star"></i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product">
+                                <a href="" class="product__banner">
+                                    <img src="/assets/images/ASA-Clear-AZ-768x768.jpg" alt="">
+                                    <div class="overlay">
+                                        <div class="buttons-set">
+                                            <a href="" class="btn add__btn"><i class="fa-solid fa-plus"></i> Xem sau</a>
+                                            <a href="" class="btn buy__btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M13.25 7.25V4.95C13.25 3.8299 13.25 3.26984 13.032 2.84202C12.8403 2.46569 12.5343 2.15973 12.158 1.96799C11.7301 1.75 11.1701 1.75 10.05 1.75H9.94999C8.82988 1.75 8.26983 1.75 7.842 1.96799C7.46568 2.15973 7.15972 2.46569 6.96797 2.84202C6.74998 3.26984 6.74998 3.8299 6.74998 4.95V7.25M6.19579 18.25H13.8042C15.0014 18.25 15.6 18.25 16.0436 18.0114C16.4334 17.8018 16.7427 17.4688 16.923 17.0646C17.1281 16.6046 17.0839 16.0076 16.9954 14.8136L16.4695 7.71361C16.3921 6.66903 16.3534 6.14675 16.1253 5.75104C15.9244 5.40263 15.6232 5.12288 15.2609 4.94829C14.8494 4.75 14.3257 4.75 13.2783 4.75H6.72171C5.67428 4.75 5.15056 4.75 4.73908 4.94829C4.37679 5.12288 4.07554 5.40263 3.87466 5.75104C3.64652 6.14675 3.60783 6.66903 3.53046 7.71361L3.00453 14.8136C2.91609 16.0076 2.87187 16.6046 3.07701 17.0646C3.25728 17.4688 3.56653 17.8018 3.95633 18.0114C4.39993 18.25 4.99855 18.25 6.19579 18.25Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                                                Mua ngay
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="product__detail">
+                                    <h2 class="product__name">ASA Clear Keycap Set(155-Key)</h2>
+                                    <div class="flex" style="width: 100%">
+                                        <h4 class="product__price"> $749.25 </h4>
+                                        <div class="product__info">
+                                            <div>(124 đã bán)</div>
+                                            <div>4.3 <i class="fa-solid fa-star"></i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="product">
+                                <a href="" class="product__banner">
+                                    <img src="/assets/images/ASA-Clear-AZ-768x768.jpg" alt="">
+                                    <div class="overlay">
+                                        <div class="buttons-set">
+                                            <a href="" class="btn add__btn"><i class="fa-solid fa-plus"></i> Xem sau</a>
+                                            <a href="" class="btn buy__btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M13.25 7.25V4.95C13.25 3.8299 13.25 3.26984 13.032 2.84202C12.8403 2.46569 12.5343 2.15973 12.158 1.96799C11.7301 1.75 11.1701 1.75 10.05 1.75H9.94999C8.82988 1.75 8.26983 1.75 7.842 1.96799C7.46568 2.15973 7.15972 2.46569 6.96797 2.84202C6.74998 3.26984 6.74998 3.8299 6.74998 4.95V7.25M6.19579 18.25H13.8042C15.0014 18.25 15.6 18.25 16.0436 18.0114C16.4334 17.8018 16.7427 17.4688 16.923 17.0646C17.1281 16.6046 17.0839 16.0076 16.9954 14.8136L16.4695 7.71361C16.3921 6.66903 16.3534 6.14675 16.1253 5.75104C15.9244 5.40263 15.6232 5.12288 15.2609 4.94829C14.8494 4.75 14.3257 4.75 13.2783 4.75H6.72171C5.67428 4.75 5.15056 4.75 4.73908 4.94829C4.37679 5.12288 4.07554 5.40263 3.87466 5.75104C3.64652 6.14675 3.60783 6.66903 3.53046 7.71361L3.00453 14.8136C2.91609 16.0076 2.87187 16.6046 3.07701 17.0646C3.25728 17.4688 3.56653 17.8018 3.95633 18.0114C4.39993 18.25 4.99855 18.25 6.19579 18.25Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                                                Mua ngay
+                                            </a>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="product__detail">
+                                    <h2 class="product__name">ASA Clear Keycap Set(155-Key)</h2>
+                                    <div class="flex" style="width: 100%">
+                                        <h4 class="product__price"> $749.25 </h4>
+                                        <div class="product__info">
+                                            <div>(124 đã bán)</div>
+                                            <div>4.3 <i class="fa-solid fa-star"></i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="page__nav flex">
+                        <a href="" class="page__nav__btn pre__btn"><i class="fa-solid fa-chevron-left"></i></a>
+                        <div class="page__num flex" style="gap: 16px">
+                            <a href="" class="page__num__item active">1</a>
+                            <a href="" class="page__num__item">2</a>
+                            <a href="" class="page__num__item">3</a>
+                            <a href="" class="page__num__item"><i class="fa-solid fa-ellipsis"></i></a>
+                        </div>
+                        <a href="" class="page__nav__btn next__btn"><i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- see our others products -->
+        <section class="section all-products-section" style="padding-top: 0;">
+            <h2 class="section-title">CÓ THỂ BẠN SẼ THÍCH</h2>
+            <div class="product-selection__wrapper flex">
+                <div class="selection__item">
+                    <div class="selection__item__banner">
+                        <a href="#"><img src="/assets/images/switches_banner.webp" alt=""></a>
+                        <div class="selection__overlay">
+                            <div class="overlay__content">
+                                <h5>SHOP</h5>
+                                <h3 class="selection__name">SWITCHES</h3>
+                                <a href="#" class="btn overlay__btn">XEM NGAY</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="selection__item">
+                    <div class="selection__item__banner">
+                        <a href="#"><img src="/assets/images/keyboards__banner.webp" alt=""></a>
+                        <div class="selection__overlay">
+                            <div class="overlay__content">
+                                <h5>SHOP</h5>
+                                <h3 class="selection__name">KEYBOARDS</h3>
+                                <a href="#" class="btn overlay__btn">XEM NGAY</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="selection__item">
+                    <div class="selection__item__banner">
+                        <a href="#"><img src="/assets/images/deskpads__banner.webp" alt=""></a>
+                        <div class="selection__overlay">
+                            <div class="overlay__content">
+                                <h5>SHOP</h5>
+                                <h3 class="selection__name">DESKPADS</h3>
+                                <a href="#" class="btn overlay__btn">XEM NGAY</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- footer -->
+        <footer class="footer flex">
+            <div class="logo">
+                <a href="#">
+                    <img src="/assets/images/logo.svg" alt="">
+                    <h1>TYPISTIAL</h1>
+                </a>
+            </div>
+            <div class="footer__top flex">
+                <div class="follow-us">
+                    <p class="follow-us-content">Đăng ký danh sách email của chúng tôi để trở thành một trong những người đầu tiên biết về các sản phẩm mới, giảm giá, giảm giá và giảm giá, v.v.! Là người đăng ký mới, bạn sẽ nhận được mã cá nhân để sử dụng cho đơn hàng đầu tiên của mình.
+                    </p>
+                    <form action="" class="follow-us-form">
+                        <div class="form-group"><input type="text" placeholder="Email"></div>
+                        <a href="#" class="form__btn btn">ĐĂNG KÝ NGAY</a>
+                    </form>
+                </div>
+                <nav class="footer__nav">
+                    <h2 class="nav__title">TYPISTIAL</h2>
+                    <ul class="about-us">
+                        <li class="nav__item"><a href="/html/about-us.html" class="nav__link">VỀ TÁC GIẢ</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">LIÊN HỆ</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">BÁN SỈ</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">PHẢN HỒI</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">CHÍNH SÁCH HOÀN TRẢ</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">DỊCH VỤ KHÁCH HÀNG</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer__nav">
+                    <h2 class="nav__title">SHOP</h2>
+                    <ul class="shop">
+                        <li class="nav__item"><a href="" class="nav__link">TẤT CẢ SẢN PHẨM</a></li>
+                        <li class="nav__item"><a href="/html/log-in.html" class="nav__link">TÀI KHOẢN</a></li>
+                        <li class="nav__item"><a href="/html/keycaps.html" class="nav__link">KEYCAPS</a></li>
+                        <li class="nav__item"><a href="/html/switches.html" class="nav__link">SWITCHES</a></li>
+                        <li class="nav__item"><a href="/html/pre-built.html" class="nav__link">KEYBOARDS</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer__nav">
+                    <h2 class="nav__title">FOLLOW US</h2>
+                    <ul class="social__icons flex">
+                        <li class="nav__item"><a href="" class="nav__link"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li class="nav__item"><a href="" class="nav__link"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li class="nav__item"><a href="https://github.com/hoanggiang2912/Giang_Profile" class="nav__link"><i class="fa-brands fa-github"></i></a></li>
+                        <li class="nav__item"><a href="" class="nav__link"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+        <footer class="right-reserved">
+            <h4>© 2023 TYPISTIAL ™</h4>
+            <h4>ALL RIGHT RESERVED</h4>
+        </footer>
+    </div>
+</body>
+<script src="/js/main.js"></script>
+</html>

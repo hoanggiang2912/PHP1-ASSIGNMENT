@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typistial Admin - Orders</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container admin-page">
+        <div class="sidebar">
+            <div style="
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;">
+                <a href="/index.html" class="logo">
+                    <img src="/assets/images/logo-full.svg" alt="Typistial logo">
+                </a>
+                <i class="fa-solid fa-bars-sort"></i>
+            </div>
+            <nav class="sidebar__nav administrator__nav">
+                <ul>
+                    <li class="nav__item active" style="background: rgba(0, 194, 255, 0.40)"><a href="/html/admin__dashboard.html" class="nav__link"><i class="fa-solid fa-chart-simple" style="color: #00C2FF;"></i> Dashboard</a></li>
+                    <li class="nav__item"><a href="" class="nav__link"><i class="fa-solid fa-envelope"></i> Messages</a></li>
+                    <li class="nav__item"><a href="/html/admin__customers.html" class="nav__link"><i class="fa-solid fa-users"></i> Customers</a></li>
+                    <li class="nav__item"><a href="/html/admin__orders.html" class="nav__link"><i class="fa-solid fa-box"></i> Orders</a></li>
+                </ul>
+            </nav>
+            <nav class="sidebar__nav setting__nav">
+                <ul>
+                    <li class="nav__item"><a href="" class="nav__link"><i class="fa-solid fa-user-pen"></i> Roles</a></li>
+                    <li class="nav__item"><a href="" class="nav__link"><i class="fa-solid fa-arrow-right-arrow-left"></i> Requests</a></li>
+                    <li class="nav__item"><a href="" class="nav__link"><i class="fa-solid fa-gear"></i> Preferences</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="admin-page__body">
+            <div class="dashboard__header">
+                <div class="toggle__sidebar">
+                    <i class="fa-solid fa-sliders"></i>
+                </div>
+                <div class="searchbar">
+                    <i class="fa-solid fa-magnifying-glass magni-icon"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="admin flex">
+                    <div class="notification">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <a href="">
+                        <img src="./dist/img/TYPISTIAL-CANVA-LOGO.png" alt="Typistial customer" class="admin__avt">
+                    </a>
+                </div>
+            </div>
+            <main class="admin-main__panel">
+                <div class="add-product__bar">
+                    <h2 class="add__product__title title">Add new product</h2>
+                    <a href="" class="add-product__btn">
+                        <i class="fas fa-plus"></i>
+                    </a>
+                </div>
+                <div class="panel__content">
+                    <div class="order-content__top ua-content__top">
+                        <h2 class="top__title">All products</h2>
+                        <div class="billing-type__filter toggle-filter">
+                            <i class="fa-solid fa-filter"></i> Filter
+                            <ul class="billing-type__list"> 
+                                <li class="type__item">
+                                    <div class="type__item__right">
+                                        <h5 class="type__item__name">Keyboards</h5>
+                                    </div>
+                                    <p class="type__item__qty">55</p>
+                                </li>
+                                <li class="type__item">
+                                    <div class="type__item__right">
+                                        <h5 class="type__item__name">Keycaps</h5>
+                                    </div>
+                                    <p class="type__item__qty">128</p>
+                                </li>
+                                <li class="type__item">
+                                    <div class="type__item__right">
+                                        <h5 class="type__item__name">Switches</h5>
+                                    </div>
+                                    <p class="type__item__qty">8</p>
+                                </li>
+                                <li class="type__item">
+                                    <div class="type__item__right">
+                                        <h5 class="type__item__name">Kits</h5>
+                                    </div>
+                                    <p class="type__item__qty">12</p>
+                                </li>
+                                <li class="type__item">
+                                    <div class="type__item__right">
+                                        <h5 class="type__item__name">Accessories</h5>
+                                    </div>
+                                    <p class="type__item__qty">12</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="admin__product__wrapper">
+                        <div class="admin__product">
+                            <div class="flex">
+                                <div class="product__banner" style="background: url('/assets/images/banner3.webp') no-repeat center center / cover"></div>
+                                <div class="product-detail__box">
+                                    <h2 class="product__name">PRODUCT NAME</h2>
+                                    <div class="product-icon__box flex" style="gap: 60px;">
+                                        <div class="icon-box__item view__box">
+                                            <i class="fal fa-eye"></i>
+                                            <div class="icon-box__label">200</div>
+                                        </div>
+                                        <div class="icon-box__item view__box">
+                                            <i class="fal fa-message"></i>
+                                            <div class="icon-box__label">120</div>
+                                        </div>
+                                        <div class="icon-box__item view__box">
+                                            <i class="fal fa-box"></i>
+                                            <div class="icon-box__label">100</div>
+                                        </div>
+                                        <div class="icon-box__item view__box">
+                                            <i class="fal fa-pen"></i>
+                                        </div>
+                                        <div class="icon-box__item view__box">
+                                            <i class="fas fa-ellipsis"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-detail__box" style="text-align: center;">
+                                <div class="sub__title">Update date</div>
+                                <div class="sub__text">08/03/2023</div>
+                                <div class="sub__text">21:19:53</div>
+                            </div>
+                            <div class="product-detail__box" style="align-items: end;">
+                                <a href="" class="delete__btn">
+                                    <i class="fal fa-times"></i>
+                                </a>
+                                <p class="normal__text">Unit price: $45</p>
+                                <p class="normal__text">55 products left</p>
+                            </div>
+                        </div>
+                        <div class="admin__product">
+                            <div class="flex">
+                                <div class="product__banner" style="background: url('/assets/images/banner3.webp') no-repeat center center / cover"></div>
+                                <div class="product-detail__box">
+                                    <h2 class="product__name">PRODUCT NAME</h2>
+                                    <div class="product-icon__box flex" style="gap: 60px;">
+                                        <div class="icon-box__item view__box">
+                                            <i class="fal fa-eye"></i>
+                                            <div class="icon-box__label">200</div>
+                                        </div>
+                                        <div class="icon-box__item view__box">
+                                            <i class="fal fa-message"></i>
+                                            <div class="icon-box__label">120</div>
+                                        </div>
+                                        <div class="icon-box__item view__box">
+                                            <i class="fal fa-box"></i>
+                                            <div class="icon-box__label">100</div>
+                                        </div>
+                                        <div class="icon-box__item view__box">
+                                            <i class="fal fa-pen"></i>
+                                        </div>
+                                        <div class="icon-box__item view__box">
+                                            <i class="fas fa-ellipsis"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-detail__box" style="text-align: center;">
+                                <div class="sub__title">Update date</div>
+                                <div class="sub__text">08/03/2023</div>
+                                <div class="sub__text">21:19:53</div>
+                            </div>
+                            <div class="product-detail__box" style="align-items: end;">
+                                <a href="" class="delete__btn">
+                                    <i class="fal fa-times"></i>
+                                </a>
+                                <p class="normal__text">Unit price: $45</p>
+                                <p class="normal__text">55 products left</p>
+                            </div>
+                        </div>
+                        <div class="admin__product">
+                            <div class="flex">
+                                <div class="product__banner" style="background: url('/assets/images/banner3.webp') no-repeat center center / cover"></div>
+                                <div class="product-detail__box">
+                                    <h2 class="product__name">PRODUCT NAME</h2>
+                                    <div class="product-icon__box flex" style="gap: 60px;">
+                                        <div class="icon-box__item view__box">
+                                            <i class="fal fa-eye"></i>
+                                            <div class="icon-box__label">200</div>
+                                        </div>
+                                        <div class="icon-box__item view__box">
+                                            <i class="fal fa-message"></i>
+                                            <div class="icon-box__label">120</div>
+                                        </div>
+                                        <div class="icon-box__item view__box">
+                                            <i class="fal fa-box"></i>
+                                            <div class="icon-box__label">100</div>
+                                        </div>
+                                        <div class="icon-box__item view__box">
+                                            <i class="fal fa-pen"></i>
+                                        </div>
+                                        <div class="icon-box__item view__box">
+                                            <i class="fas fa-ellipsis"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-detail__box" style="text-align: center;">
+                                <div class="sub__title">Update date</div>
+                                <div class="sub__text">08/03/2023</div>
+                                <div class="sub__text">21:19:53</div>
+                            </div>
+                            <div class="product-detail__box" style="align-items: end;">
+                                <a href="" class="delete__btn">
+                                    <i class="fal fa-times"></i>
+                                </a>
+                                <p class="normal__text">Unit price: $45</p>
+                                <p class="normal__text">55 products left</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+<script src="/js/main.js"></script>
+</html>
