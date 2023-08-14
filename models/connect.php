@@ -38,6 +38,7 @@ function renderGeneralProduct($productArr) {
     foreach ($productArr as $item) {
         extract($item);
         $gia = '';
+        $linkDetail = 'index.php?pg=viewProductDetail&productId=' . $id;
         if ($price > 0) {
             $gia = '<h4 class="product__price">$' . $price . '</h4>';
         } else {
@@ -60,14 +61,30 @@ function renderGeneralProduct($productArr) {
         } else {
             $newLabel = '';
         }
-        if ($status == 0) {
-            $soldOutOverlay = '
-                    <div class="soldout__overlay">
-                        <div class="soldout__label">Sold out</div>
-                    </div>
-                ';
+        if (!$amount > 0) {
+            $promo = '';
+            $newLabel = '';
+            $soldoutLabel = '
+                <div class="soldout__overlay">
+                    <div class="soldout__label">Sold out</div>
+                </div>
+            ';
+            $button = '
+                <a href="' . $linkDetail . '" class="btn buy__btn" style="height: 100%">
+                    <i class="fal fa-heart"></i>
+                    Wishlist
+                </a>
+            ';
         } else {
-            $soldOutOverlay = '';
+            $soldoutLabel = '';
+            $button = '
+                <a href="' . $linkDetail . '" class="btn buy__btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+<path d="M13.25 7.25V4.95C13.25 3.8299 13.25 3.26984 13.032 2.84202C12.8403 2.46569 12.5343 2.15973 12.158 1.96799C11.7301 1.75 11.1701 1.75 10.05 1.75H9.94999C8.82988 1.75 8.26983 1.75 7.842 1.96799C7.46568 2.15973 7.15972 2.46569 6.96797 2.84202C6.74998 3.26984 6.74998 3.8299 6.74998 4.95V7.25M6.19579 18.25H13.8042C15.0014 18.25 15.6 18.25 16.0436 18.0114C16.4334 17.8018 16.7427 17.4688 16.923 17.0646C17.1281 16.6046 17.0839 16.0076 16.9954 14.8136L16.4695 7.71361C16.3921 6.66903 16.3534 6.14675 16.1253 5.75104C15.9244 5.40263 15.6232 5.12288 15.2609 4.94829C14.8494 4.75 14.3257 4.75 13.2783 4.75H6.72171C5.67428 4.75 5.15056 4.75 4.73908 4.94829C4.37679 5.12288 4.07554 5.40263 3.87466 5.75104C3.64652 6.14675 3.60783 6.66903 3.53046 7.71361L3.00453 14.8136C2.91609 16.0076 2.87187 16.6046 3.07701 17.0646C3.25728 17.4688 3.56653 17.8018 3.95633 18.0114C4.39993 18.25 4.99855 18.25 6.19579 18.25Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                    Mua ngay
+                </a>
+            ';
         }
         $backgroundLink = "./views/layout/assets/images/" . $img;
         $linkDetail = 'index.php?pg=viewProductDetail&productId='.$id;
@@ -79,7 +96,7 @@ function renderGeneralProduct($productArr) {
                     <div class="product__tags">
                         ' . $promo . $newLabel . '
                     </div>
-                    
+                    '.$soldoutLabel.'
                     <div class="product__detail">
                         <div class="buttons-set">
                             <form action="index.php?pg=addCart" method="post">
@@ -89,12 +106,7 @@ function renderGeneralProduct($productArr) {
                                 <input type="hidden" name="img" value="'.$img.'">
                                 <input type="hidden" name="qty" value="1">
                             </form>
-                            <a href="'.$linkDetail.'" class="btn buy__btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-    <path d="M13.25 7.25V4.95C13.25 3.8299 13.25 3.26984 13.032 2.84202C12.8403 2.46569 12.5343 2.15973 12.158 1.96799C11.7301 1.75 11.1701 1.75 10.05 1.75H9.94999C8.82988 1.75 8.26983 1.75 7.842 1.96799C7.46568 2.15973 7.15972 2.46569 6.96797 2.84202C6.74998 3.26984 6.74998 3.8299 6.74998 4.95V7.25M6.19579 18.25H13.8042C15.0014 18.25 15.6 18.25 16.0436 18.0114C16.4334 17.8018 16.7427 17.4688 16.923 17.0646C17.1281 16.6046 17.0839 16.0076 16.9954 14.8136L16.4695 7.71361C16.3921 6.66903 16.3534 6.14675 16.1253 5.75104C15.9244 5.40263 15.6232 5.12288 15.2609 4.94829C14.8494 4.75 14.3257 4.75 13.2783 4.75H6.72171C5.67428 4.75 5.15056 4.75 4.73908 4.94829C4.37679 5.12288 4.07554 5.40263 3.87466 5.75104C3.64652 6.14675 3.60783 6.66903 3.53046 7.71361L3.00453 14.8136C2.91609 16.0076 2.87187 16.6046 3.07701 17.0646C3.25728 17.4688 3.56653 17.8018 3.95633 18.0114C4.39993 18.25 4.99855 18.25 6.19579 18.25Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-                                Mua ngay
-                            </a>
+                            '. $button.'
                         </div>
                         <a href="'.$linkDetail.'" class="product__name">' . $name . '</a>
                         <div class="flex" style="gap: 12px">
@@ -139,10 +151,28 @@ function renderGeneralProduct($productArr) {
         $conn->exec($sql);
         $conn = null;
     }
+    function insertBill ($sql) {
+        $conn = connectdb();
+        $conn->exec($sql);
+        $last_id = $conn->lastInsertId();
+        $conn = null;
+        return $last_id;
+    }
     function update ($sql) {
         $conn = connectdb();
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $conn = null;  
+    }
+    function generateRandomBillingID($length = 8) {
+        $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $billingID = '';
+        
+        for ($i = 0; $i < $length; $i++) {
+            $randomIndex = rand(0, strlen($characters) - 1);
+            $billingID .= $characters[$randomIndex];
+        }
+        
+        return $billingID;
     }
 ?>

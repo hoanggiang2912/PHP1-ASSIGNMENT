@@ -1,6 +1,5 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
-
 function Validator (options) {
     const formElement = $(options.formSelector)
     let selectorRules = {}
@@ -16,15 +15,23 @@ function Validator (options) {
     }
     if(formElement) {
         
-        formElement.onsubmit = e => {
-            e.preventDefault();
-            options.rules.forEach(rule => {
-                const inputElements = Array.from(formElement.querySelectorAll(rule.selector))
-                inputElements.forEach(inputElement => {
-                    validate(inputElement , rule)
-                })
-            })
-        }
+        // formElement.onsubmit = e => {
+        //     e.preventDefault();
+        //     let isValid = true;
+        //     options.rules.forEach(rule => {
+        //         const inputElements = Array.from(formElement.querySelectorAll(rule.selector))
+        //         inputElements.forEach(inputElement => {
+        //             validate(inputElement , rule)
+        //             if (getParentElement(inputElement , options.formGroupSelector).classList.contains('invalid')) {
+        //                 isValid = false;
+        //             }
+        //         })
+        //     })
+        //     if (isValid) {
+        //         formElement.submit()
+        //         console.log(formElement)
+        //     }
+        // }
         
         function validate (inputElement , rule) {
             const rules = selectorRules[rule.selector]
@@ -88,7 +95,16 @@ Validator.isEmail = (selector , message) => {
         }
     }
 }
-Validator.isPassword = (selector , min , message) => {
+Validator.isPhone = (selector , message) => {
+    return {
+        selector,
+        test (value) {
+            const regex = /^\d{10}$/
+            return regex.test(value) ? undefined : message || 'Your phone number is invalid' 
+        }
+    }
+}
+Validator.isPassword = (selector , min = 6, message) => {
     return {
         selector,
         test (value) {

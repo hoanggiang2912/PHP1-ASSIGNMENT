@@ -4,20 +4,20 @@
     if (!isset($_SESSION['admin']) ) {
         header('Location: login.php');
     } else {
-        $user = $_SESSION['userAdmin'];
+        $user = $_SESSION['admin'];
         extract($user);
     
         // connect database 
         require_once '../models/connect.php';
         require_once '../models/product.php';
         require_once '../models/catalog.php';
+        require_once '../models/global.php';
         require_once './public/head.php';
         
         if (isset($_GET['pg']) && $_GET['pg']) {
             switch ($_GET['pg']) {
                 case 'logout':
                     unset($_SESSION['admin']);
-                    unset($_SESSION['userAdmin']);
                     header('Location: login.php');
                     break;
                 case 'user':
@@ -25,6 +25,7 @@
                     break;
                 case 'productSearch':
                     $categories = [];
+                    $productList = [];
                     if(isset($_POST['search'])) {
                         $query = $_POST['query'];
                         $productList = getProductByQuery($query);
@@ -92,16 +93,60 @@
                     require_once './public/product.php';
                     break;
                 case 'delete':
+                    // get product id
                     if (isset($_GET['delId']) && $_GET['delId'] > 0) {
                         $productId = $_GET['delId'];
+                        // delete image of product 
+                        $productImageFile = getImageById($productId);
+                        $img = "../".PATH_IMG_PRODUCTS.$productImageFile;
+                        if (file_exists($img)) {
+                            unlink($img);
+                        }
+                        // then delete product by id
                         deleteProductById ($productId);
                         header('Location: index.php?pg=product');
                     }
                     break;
                 case 'addNewProduct':
+                    // get all catalog
+                    $catalogs = getCatalogs();
+                    if (isset($_POST['addProduct'])) {
+                        $name = $_POST['name'];
+                        $price = $_POST['price'];
+                        $image = $_POST['image'];
+                        $amount = $_POST['amount'];
+                        $promotion = $_POST['promotion'];
+                        $description = $_POST['description'];  
+                        $detail = $_POST['detail'];
+                        $idCata = $_POST['categoriesOption'];
+                        insertProductById ($name , $price , $idCata , $amount , $promotion , $description , $detail);
+                        header('Location: index.php?pg=product');
+                    }
                     require_once './public/addNewProduct.php';
                     break;
                 case 'updateProductForm':
+                    // get all catalog
+                    $catalogs = getCatalogs();
+                    // get product by id to show
+                    if (isset($_GET['Id']) && $_GET['Id'] > 0) {
+                        $productId = $_GET['Id'];
+                        $product = getProductById($productId);
+                        $productCatalog = getCatalogIdByProductId ($productId);
+                        $productOptions = getProductOptionsById($productId);
+
+                        if (isset($_POST['updateProduct'])) {
+                            $name = $_POST['name'];
+                            $categoryOption = $_POST['categoryOption'];
+                            $price = $_POST['price'];
+                            $amount = $_POST['amount'];
+                            $promotion = $_POST['promotion'];
+                            $description = $_POST['desc'];
+                            $detail = $_POST['detail'];
+                            
+                            updateProductById ($productId , $name , $categoryOption , $price , $amount , $promotion , $description , $detail);
+                            header("Location: index.php?pg=product");
+                        }
+                    }
                     require_once './public/updateProductForm.php';
                     break;
                 case 'order':

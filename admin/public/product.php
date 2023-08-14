@@ -19,7 +19,12 @@
     $productsHtml = '';
     foreach ($productList as $item) {
         extract($item);
-        $linkImage = "../views/layout/assets/images/$img";
+        $imageFile = "../".PATH_IMG_PRODUCTS.$img;
+        if (file_exists($imageFile)) {
+            $linkImage = $imageFile;
+        } else {
+            $linkImage = '';
+        }
         $productsHtml .= '
             <div class="admin__product">
                 <div class="flex">
@@ -42,7 +47,7 @@
                                 <div class="icon-box__label">x</div>
                             </div>
                             <div class="icon-box__item view__box">
-                                <a href="index.php?pg=updateProductForm&Id='.$id.'" class="edit__btn"><i class="fal fa-pen"></i></a>
+                                <a href="index.php?pg=updateProductForm&Id='.$id.'" class="edit__btn"><i class="fal fa-pen"></i></a> 
                             </div>
                             <div class="icon-box__item view__box">
                                 <i class="fas fa-ellipsis"></i>

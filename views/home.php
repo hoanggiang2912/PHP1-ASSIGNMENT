@@ -416,3 +416,13 @@
                 Single comment end-->
             </div>
         </section>
+<script>
+    Validator({
+        formSelector: '.wait-list-form',
+        formGroupSelector: '.form-group',
+        formMessage: '.form__message',
+        rules: [
+            Validator.isEmail('.email')
+        ]
+    })
+</script>

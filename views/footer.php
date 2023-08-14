@@ -2,8 +2,7 @@
 <footer class="footer flex">
     <div class="logo">
         <a href="#">
-            <img src="./views/layout/assets/images/logo.svg" alt="">
-            <h1>TYPISTIAL</h1>
+            <img src="./views/layout/assets/images/logo-full.svg" alt="">
         </a>
     </div>
     <div class="footer__top flex">
@@ -13,9 +12,22 @@
                 được mã cá nhân để sử dụng cho đơn hàng đầu tiên của mình.
             </p>
             <form action="" class="follow-us-form">
-                <div class="form-group"><input type="text" placeholder="Email"></div>
+                <div class="form-group">
+                    <input type="text" placeholder="Email" class="email">
+                    <span class="form__message"></span>
+                </div>
                 <a href="#" class="form__btn btn">ĐĂNG KÝ NGAY</a>
             </form>
+            <script>
+                Validator({
+                    formSelector: '.follow-us-form',
+                    formGroupSelector: '.form-group',
+                    formMessage: '.form__message',
+                    rules: [
+                        Validator.isEmail('.email')
+                    ]
+                })
+            </script>
         </div>
         <nav class="footer__nav">
             <h2 class="nav__title">TYPISTIAL</h2>
@@ -58,15 +70,4 @@
 </div>
 </body>
 <script src="./views/layout/assets/js/main.js"></script>
-<script src="./views/layout/assets/js/validator.js"></script>
-<script>
-    Validator({
-        formSelector: '.wait-list-form',
-        formMessage: '.form__message',
-        rules: [
-            Validator.isRequired('.fullname'),
-            Validator.isEmail('.email')
-        ]
-    })
-</script>
 </html>

@@ -1,6 +1,5 @@
 
-const $ = document.querySelector.bind(document)
-const $$ = document.querySelectorAll.bind(document)
+
 // searchbar
 const searchBar = $$('.bar')
 const searchIcon = $$('.magni-icon')
@@ -42,9 +41,16 @@ const app = {
     eventHandler () {
         // expand search bar
         searchIcon.forEach((icon , index) => {
-            icon.addEventListener('click', () => {
-                icon.parentElement.classList.toggle('active')
+            icon.addEventListener('mouseenter', () => {
+                const iconParent = icon.parentElement.parentElement
+                iconParent.classList.toggle('active')
+                iconParent.querySelector('.magni-icon').style.color = 'black';
             })
+            // icon.addEventListener('mouseleave', () => {
+            //     const iconParent = icon.parentElement.parentElement
+            //     iconParent.classList.toggle('active')
+            //     iconParent.querySelector('.magni-icon').style.color = 'black';
+            // })
         });
         // product tabs
         const tabContainers = $$('.tab-container')

@@ -1,34 +1,20 @@
 <?php 
-
+    if (isset($_SESSION['user'])) {
+        if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])){
+        $path = 'index.php?pg=order';
+        }
+    } else {
+        $path = 'index.php?pg=login';
+    }
 ?>
 
 <!-- main section  -->
 <section class="section cart__main">
-    <nav>
-        <ul class="payment__nav">
-            <div class="toggle-dropdown" style="display: none;"><i class="fa-solid fa-sliders"></i> Giỏ hàng</div>
-            <li class="nav__item active"><i class="fa-solid fa-box"></i><a href="/html/cart.html" class="nav__link">Giỏ
-                    hàng</a></li>
-            <li class="nav__item"><a href="" class="nav__link"><i class="fa-solid fa-chevron-right"></i></a></li>
-            <li class="nav__item"><i class="fa-solid fa-wallet"></i><a href="/html/checkout.html"
-                    class="nav__link">Thanh toán</a></li>
-            <li class="nav__item"><a href="" class="nav__link"><i class="fa-solid fa-chevron-right"></i></a></li>
-            <li class="nav__item">
-                <i class="fa-solid fa-credit-card"></i><a href="/html/payment.html" class="nav__link">Phương thức thanh
-                    toán</a>
-            </li>
-        </ul>
-        <ul class="payment__respon__nav">
-            <li class="nav__item active"><i class="fa-solid fa-box"></i><a href="/html/cart.html" class="nav__link">Giỏ
-                    hàng</a></li>
-            <li class="nav__item"><i class="fa-solid fa-wallet"></i><a href="/html/checkout.html"
-                    class="nav__link">Thanh toán</a></li>
-            <li class="nav__item">
-                <i class="fa-solid fa-credit-card"></i><a href="/html/payment.html" class="nav__link">Phương thức thanh
-                    toán</a>
-            </li>
-        </ul>
-    </nav>
+
+    <?php 
+    require_once 'paymentNav.php';
+    ?>
+    <form action="<?=$path?>" method="post">
     <div class="cart__body">
         <div class="cart__product__wrapper">
             <?php 
@@ -103,7 +89,7 @@
                 <div class="summary__detail">
                     <div class="flex">
                         <span>Tổng tiền sản phẩm</span>
-                        <span class="summary__price">$0</span>
+                        <span class="summary__price">$<?=$subTotal?></span>
                     </div>
                     <div class="flex">
                         <span>Phí giao hàng</span>
@@ -116,7 +102,8 @@
                     <span class="summary__total__price">$<?=$total?></span>
                 </div>
             </div>
-            <a href="/html/checkout.html" class="buy__now__btn">Mua ngay</a>
+            <button type="submit" name="order" class="buy__now__btn">Mua ngay</button>
         </div>
     </div>
+    </form>
 </section>

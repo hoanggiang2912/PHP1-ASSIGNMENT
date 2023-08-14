@@ -59,4 +59,5 @@
         $mySQL = "UPDATE catalog SET name='$name' WHERE id = $cateId";
         update($mySQL);
     }  
+    
 ?>

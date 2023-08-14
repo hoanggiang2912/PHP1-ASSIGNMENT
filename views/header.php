@@ -1,3 +1,29 @@
+<?php 
+    $productList = [];
+    if (isset($_GET['search'])) {
+        $q = $_GET['search_query'];
+        $productList = getProductByQuery($q , 5);
+        // header('Location: index.php?search_query='.$q);
+    }
+    
+    $search_html = '';
+    foreach ($productList as $item) {
+        extract($item);
+        $path = "./views/layout/assets/images/$img";
+        $search_html .= '
+            <!-- single product start -->
+            <a href="index.php?pg=viewProductDetail&productId='.$id.'" class="search__product">
+                <div class="search-product__banner" style="background: url("'.$path.'") no-repeat center center / cover;"></div>
+                <div class="search-product__detail flex">
+                    <h2 class="search-product__name">Product name</h2>
+                    <span class="search-product__price">$12</span>
+                </div>                              
+            </a>
+            <!-- single product end -->
+        ';
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +34,7 @@
     <title>Trang chủ - TYPISTIAL</title>
     <link rel="stylesheet" href="./views/layout/assets/css/main.css">
     <link rel="stylesheet" href="./views/layout/assets/css/responsive.css">
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="./views/layout/assets/images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,6 +42,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="./views/layout/assets/js/validator.js"></script>
 </head>
 <?php 
     $catalogs = getCatalog();
@@ -32,26 +59,50 @@
         }
     }
     $userHtml = '';
+    $homeLink = '';
     if (isset($_GET['user'])){
         $userId = $_GET['user'];
-        $user = getUserById($userId);
-        $_SESSION['user'] = $user;
-        if ($_SESSION['user']) {
+        $homeLink = "index.php?user=$userId";
+        if (isset($_SESSION['user'])) {
             $userHtml = '<li class="nav__item" style="position: relative;">
                             <a href="index.php?pg=userAccount" class="nav__link user"></a>
                             <ul class="user-header__nav">
-                                <li class="nav__item"><a href="index.php?pg=general" class="nav__link"><i class="fal fa-user"></i> Your Account</a></li>
+                                <li class="nav__item"><a href="index.php?pg=general&user='.$userId.'" class="nav__link"><i class="fal fa-user"></i> Your Account</a></li>
                                 <li class="nav__item"><a href="index.php?pg=userLogout" class="nav__link"><i class="fal fa-sign-out"></i> Log Out</a></li>
                             </ul>
                         </li>';
-        } 
+        }
     } else {
+        $homeLink = 'index.php';
         $userHtml = '<li class="nav__item" style="position: relative">
                         <a href="index.php?pg=login" class="nav__link">
                             <i class="fa-solid fa-user"></i>
                         </a>
                         <ul class="user-header__nav" style="top: 60px">
-                            <li class="nav__item" style="padding-inline: 20px;"><a href="index.php?pg=login" class="nav__link"><i class="fal fa-user"></i> Log In</a></li>
+                            <li class="nav__item"><a href="index.php?pg=login" class="nav__link" style="width: 100%"><i class="fal fa-user"></i> Log In</a></li>
+                            <li class="nav__item"><a href="index.php?pg=createAccount" class="nav__link" style="line-height: normal; width: 100%"><i class="fal fa-user-plus"></i> Create account</a></li>
+                        </ul>
+                    </li>';
+    }
+    if (isset($_SESSION['user'])) {
+        extract($_SESSION['user']);
+        $homeLink = "index.php?user=$id";
+        $userHtml = '<li class="nav__item" style="position: relative;">
+                        <a href="index.php?pg=userAccount" class="nav__link user"></a>
+                        <ul class="user-header__nav">
+                            <li class="nav__item"><a href="index.php?pg=general&user='.$id.'" class="nav__link"><i class="fal fa-user"></i> Your Account</a></li>
+                            <li class="nav__item"><a href="index.php?pg=userLogout" class="nav__link"><i class="fal fa-sign-out"></i> Log Out</a></li>
+                        </ul>
+                    </li>';
+    } else {
+        $homeLink = "index.php";
+        $userHtml = '<li class="nav__item" style="position: relative">
+                        <a href="index.php?pg=login" class="nav__link">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                        <ul class="user-header__nav" style="top: 60px">
+                            <li class="nav__item"><a href="index.php?pg=login" class="nav__link" style="width: 100%"><i class="fal fa-user"></i> Log In</a></li>
+                            <li class="nav__item"><a href="index.php?pg=createAccount" class="nav__link" style="line-height: normal; width: 100%"><i class="fal fa-user-plus"></i> Create account</a></li>
                         </ul>
                     </li>';
     }
@@ -60,12 +111,12 @@
     <div class="container">
         <header class="header">
             <div class="header__inner">
-                <a href="index.php" class="logo flex"><img src="./views/layout/assets/images/logo.svg"
+                <a href="<?= $homeLink?>" class="logo flex"><img src="./views/layout/assets/images/logo.svg"
                         alt=""><span>TYPISTIAL</span></a>
                 <nav class="header-nav center-nav">
                     <ul class="flex" style="gap: 30px">
                         <li class="nav__item">
-                            <a href="index.php" class="nav__link">TRANG CHỦ
+                            <a href="<?=$homeLink?>" class="nav__link">TRANG CHỦ
                                 <span class="header__line"></span>
                             </a>
                         </li>
@@ -110,11 +161,16 @@
                 </nav>
                 <nav class="header-nav right__nav">
                     <ul class="flex">
-                        <li class="nav__item">
+                        <li class="nav__item" style="position: relative;">
                             <!-- expand search-bar -->
-                            <div class="search-bar">
-                                <input type="text" name="searchbar" placeholder="Search..." class="bar">
-                                <i class="fa-solid fa-magnifying-glass magni-icon" style="cursor: pointer;"></i>
+                            <form action="<?=$_SERVER['PHP_SELF']?>" method="get" class="search-bar">
+                                <input type="text" name="search_query" placeholder="Search..." class="bar">
+                                <button type="submit" name="search" style="position: relative; z-index: 100;">
+                                    <i class="fa-solid fa-magnifying-glass magni-icon" style="cursor: pointer;"></i>
+                                </button>
+                            </form>
+                            <div class="search-product__list">
+                                <?=$search_html?>
                             </div>
                         </li>
                         <li class="nav__item">

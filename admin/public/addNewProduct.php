@@ -1,3 +1,16 @@
+<?php 
+    // render available categories
+    $categoriesHtml = '';
+    $i = 1;
+    foreach ($catalogs as $item) {
+        extract($item);
+        $categoriesHtml .= '
+            <option value="'.$i.'">'.$name.'</option>
+        ';
+        $i++;
+    }
+?>
+
 <div class="container admin-page">
     <?php 
         require_once 'sidebar.php';
@@ -11,22 +24,24 @@
                 </a>
             </div>
             <div class="panel__content" style="padding: 0;">
-                <form action="" method="post" class="add-product__form">
+                <form action="index.php?pg=addNewProduct" method="post" class="add-product__form">
                     <div class="form__group">
                         <input type="text" name="name" placeholder="Tên sản phẩm">
                     </div>
                     <div class="form__group">
                         <select name="categoriesOption" id="categoriesOption">
-                            <option value="1">Keyboards</option>
-                            <option value="2">Keycaps</option>
-                            <option value="3">Switches</option>
-                            <option value="4">Kits</option>
-                            <option value="5">Deskpads</option>
+                            <!-- render available categories start -->
+                            <option value="">Choose category</option>
+                            <?= $categoriesHtml?>
+                            <!-- render available categories end -->
                         </select>
                     </div>
                     <div class="form__group">
-                        <input type="text" placeholder="Đơn giá">
-                        <input type="text" placeholder="Số lượng">
+                        <input type="text" name="price" placeholder="Đơn giá">
+                        <input type="text" name="amount" placeholder="Số lượng">
+                    </div>
+                    <div class="form__group">
+                        <input type="text" name="promotion" placeholder="Giảm __%">
                     </div>
                     <div class="form__group__wrapper">
                         <div class="form__group image-upload">
@@ -42,7 +57,7 @@
                                             stroke-linejoin="round" />
                                     </svg>
                                 </label>
-                                <input type="file" multiple id="image-upload" hidden style="display: none">
+                                <input type="file" name="image" multiple id="image-upload" hidden style="display: none">
                             </label>
                         </div>
                         <div class="image-upload__panel">
@@ -104,17 +119,17 @@
                         </div>
                     </div>
                     <div class="form__group">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Mô tả ngắn - 255 ký tự"></textarea>
+                        <textarea name="description" id="" cols="30" rows="10" placeholder="Mô tả ngắn - 255 ký tự"></textarea>
                     </div>
                     <div class="form__group">
-                        <textarea name="" id="" cols="30" rows="20"
+                        <textarea name="detail" id="" cols="30" rows="20"
                             placeholder="Mô tả chi tiết - 1024 ký tự"></textarea>
                     </div>
                     <div class="form__group" style="box-shadow: none; justify-content: end;">
                         <div class="buttons-set" style="align-self: stretch; width: 50%">
                             <button type="submit" class="form__btn delete-form-data__btn"><i
                                     class="fal fa-file-times"></i> Xóa tất cả</button>
-                            <button type="submit" class="form__btn submit-form__btn"> <span><i class="fal fa-plus"></i>
+                            <button type="submit" name="addProduct" class="form__btn submit-form__btn"> <span><i class="fal fa-plus"></i>
                                     Thêm sản phẩm</span></button>
                         </div>
                     </div>

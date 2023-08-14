@@ -1,3 +1,38 @@
+<?php 
+    extract($productCatalog);
+    extract($product);
+    function renderOption ($optionList , $idCatalog = 0) {
+        $html ='';
+        $select = '';
+        foreach ($optionList as $item) {
+            extract($item);
+            if (($idCatalog > 0) && ($idCatalog === $id)) {
+                $select = 'selected';
+            } else {
+                $select = '';
+            }
+            $html .= '<option value="'.$id.'" '.$select.'>'.$name.'</option>';
+        }
+        echo $html;
+    }
+
+    function renderProductOption ($optionList) {
+        $i = 1;
+        $html = '';
+        foreach ($optionList as $item) {
+            extract($item);
+            $var = 'option'.$i;
+            $html .= '
+                <li class="list__item">
+                    <input type="text" name="option" placeholder="Lựa chọn 2" value="'.$$var.'">
+                </li>
+            ';
+            echo $html;
+            $i++;
+        }
+    }
+?>
+
 <div class="container admin-page">
     <?php
     require_once 'sidebar.php';
@@ -5,23 +40,24 @@
     <div class="admin-page__body">
         <div class="admin-main__panel">
             <div class="panel__content" style="padding: 0;">
-                <form action="" method="post" class="add-product__form">
+                <form action="index.php?pg=updateProductForm&Id=<?=$id?>" method="post" class="add-product__form">
                     <h2 class="title">Product update</h2>
                     <div class="form__group">
-                        <input type="text" name="name" placeholder="Tên sản phẩm">
+                        <input type="text" name="name" placeholder="Tên sản phẩm" value="<?=$name?>">
                     </div>
                     <div class="form__group">
-                        <select name="categoriesOption" id="categoriesOption">
-                            <option value="1">Keyboards</option>
-                            <option value="2">Keycaps</option>
-                            <option value="3">Switches</option>
-                            <option value="4">Kits</option>
-                            <option value="5">Deskpads</option>
+                        <select name="categoryOption" id="categoriesOption">
+                            <!-- render categories options start -->
+                            <?= renderOption($catalogs , $id_catalog)?>
+                            <!-- render categories options end -->
                         </select>
                     </div>
                     <div class="form__group">
-                        <input type="text" placeholder="Đơn giá">
-                        <input type="text" placeholder="Số lượng">
+                        <input type="text" placeholder="Đơn giá" name="price" value="<?= $price ?>">
+                        <input type="text" placeholder="Số lượng" name="amount" value="<?= $amount ?>">
+                    </div>
+                    <div class="form__group">
+                        <input type="text" name="promotion" placeholder="Giảm __%" value="<?= $promotion ?>">
                     </div>
                     <div class="form__group__wrapper">
                         <div class="form__group image-upload">
@@ -85,32 +121,26 @@
                         </div>
                         <div class="option-list__wrapper">
                             <ul class="option__list">
-                                <li class="list__item">
-                                    <input type="text" placeholder="Lựa chọn 1">
-                                </li>
-                                <li class="list__item">
-                                    <input type="text" placeholder="Lựa chọn 2">
-                                </li>
-                                <li class="list__item">
-                                    <input type="text" placeholder="Lựa chọn 3">
-                                </li>
+                                <!-- render product option start -->
+                                <?=renderProductOption($productOptions)?>
+                                <!-- render product option end -->
                             </ul>
                             <a href="" class="add-option__btn"><i class="fal fa-plus"></i> Thêm lựa chọn</a>
                         </div>
                     </div>
                     <div class="form__group">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Mô tả ngắn - 255 ký tự"></textarea>
+                        <textarea name="desc" id="" cols="30" rows="10" placeholder="Mô tả ngắn - 255 ký tự" value="<?=$description?>"></textarea>
                     </div>
                     <div class="form__group">
-                        <textarea name="" id="" cols="30" rows="20"
+                        <textarea name="detail" id="" cols="30" rows="20"
                             placeholder="Mô tả chi tiết - 1024 ký tự"></textarea>
                     </div>
                     <div class="form__group" style="box-shadow: none; justify-content: end;">
                         <div class="buttons-set" style="align-self: stretch; width: 50%">
                             <button type="submit" class="form__btn delete-form-data__btn"><i
-                                    class="fal fa-file-times"></i> Xóa tất cả</button>
-                            <button type="submit" class="form__btn submit-form__btn"> <span><i class="fal fa-plus"></i>
-                                    Thêm sản phẩm</span></button>
+                                    class="fal fa-times"></i> Hủy</button>
+                            <button type="submit" name="updateProduct" class="form__btn submit-form__btn"> <span><i class="fal fa-save"></i>
+                                    Lưu chỉnh sửa</span></button>
                         </div>
                     </div>
                 </form>

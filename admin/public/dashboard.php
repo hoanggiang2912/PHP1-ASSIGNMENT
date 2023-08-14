@@ -11,37 +11,36 @@
                 <h2 class="greeting">Hi Hoàng Giang , Welcome back!</h2>
                 <div class="top__box">
                     <div class="box__item">
-                        <h4 class="box__title" style="display: block;"><i class="fa-solid fa-circle" style="color: #00A3FF; font-size: 8px;"></i> Update</h4>
+                        <h4 class="box__title" style="display: block;"><i class="fa-solid fa-circle" style="color: #00A3FF; font-size: 8px;"></i> Cập nhật</h4>
                         <div class="box__content">
-                            <h5>Sales revenue increased</h5>    
-                            <span class="masking-text">20%</span><h5 style="display: inline-block">in 1 week</h5>
-                            <a href="" class="box__content__link" style="display: block; margin: 0;">See analystic <i class="fa-solid fa-chevron-right"></i></a>
+                            <h5>Doanh thu tăng</h5>    
+                            <span class="masking-text">20%</span> <h5 style="display: inline-block">trong 1 tuần</h5>
                         </div>  
                     </div>
                     <div class="box__item">
-                        <h4 class="box__title">Net revenue <i class="fa-solid fa-ellipsis"></i></h4>
+                        <h4 class="box__title">Doanh thu thuần</h4>
                         <h2 class="hightlight__content">$123.000</h2>
-                        <label class="box__label"><i class="fa-solid fa-arrow-trend-up label__icon"></i> 5% vs last month</label>
+                        <label class="box__label"><i class="fa-solid fa-arrow-trend-up label__icon"></i> 5% so với tháng trước</label>
                     </div>
                     <div class="box__item">
-                        <h4 class="box__title">Net revenue <i class="fa-solid fa-ellipsis"></i></h4>
+                        <h4 class="box__title">Doanh thu tuần</h4>
                         <h2 class="hightlight__content">$123.000</h2>
-                        <label class="box__label"><i class="fa-solid fa-arrow-trend-up label__icon"></i> 5% vs last month</label>
+                        <label class="box__label"><i class="fa-solid fa-arrow-trend-up label__icon"></i> 5% so với tuần trước</label>
                     </div>
                     <div class="box__item">
-                        <h4 class="box__title">Net revenue <i class="fa-solid fa-ellipsis"></i></h4>
+                        <h4 class="box__title">Doanh thu tháng</h4>
                         <h2 class="hightlight__content">$123.000</h2>
-                        <label class="box__label"><i class="fa-solid fa-arrow-trend-up label__icon"></i> 5% vs last month</label>
+                        <label class="box__label"><i class="fa-solid fa-arrow-trend-up label__icon"></i> 5% so với tháng trước</label>
                     </div>
                 </div>
                 <div class="middle__box">
                     <div class="box__item products">
                         <h4 class="box__title">
-                            Product <a href="#" class="box-detai__btn">Detail</a>
+                            Sản phẩm <a href="index.php?pg=product" class="box-detai__btn">Chi tiết</a>
                         </h4>
                         <div class="item__specs__wrapper flex">
                             <div class="spec__item flex">
-                                <div class="spec__title">Product lauched</div>
+                                <div class="spec__title">Sản phẩm đã ra mắt</div>
                                 <div class="hightlight__content">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="45" height="46" viewBox="0 0 45 46" fill="none">
   <path d="M30.9375 17.9534L14.0625 8.22217" stroke="url(#paint0_linear_887_9375)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -67,14 +66,15 @@
     </linearGradient>
   </defs>
 </svg>
+                                    <!-- hiển thị số lượng sản phẩm -->
                                     100
                                 </div>
                                 <label class="box__label">
-                                    <i class="fa-solid fa-arrow-trend-up label__icon"></i> 5% vs last month
+                                    <i class="fa-solid fa-arrow-trend-up label__icon"></i> 5% so với tháng trước
                                 </label>
                             </div>
                             <div class="spec__item">
-                                <div class="spec__title">Product sold</div>
+                                <div class="spec__title">Sản phẩm đã bán</div>
                                 <div class="hightlight__content">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="45" height="46" viewBox="0 0 45 46" fill="none">
   <path d="M30.9375 17.9534L14.0625 8.22217" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -82,19 +82,20 @@
   <path d="M6.13086 13.3784L22.4996 22.8472L38.8684 13.3784" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   <path d="M22.5 41.7286V22.8286" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
+                                    <!-- hiển thị số sản phẩm đã bán -->
                                     50
                                 </div>
                                 <label class="box__label">
-                                    <i class="fa-solid fa-arrow-trend-up label__icon"></i> 5% vs last month
+                                    <i class="fa-solid fa-arrow-trend-up label__icon"></i> 5% so với tháng trước
                                 </label> 
                             </div>
                         </div>
                     </div>
                     <div class="box__item users">
-                        <h4 class="box__title">Users <a href="#" class="box-detai__btn">Detail</a></h4>
+                        <h4 class="box__title">Khách hàng <a href="#" class="box-detai__btn">Chi tiết</a></h4>
                         <div class="item__specs__wrapper flex">
                             <div class="spec__item flex">
-                                <div class="spec__title">New customers</div>
+                                <div class="spec__title">Mới</div>
                                 <div class="hightlight__content">
                                     <svg width="35" height="35" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path style="width: 100% ; height: 100%" d="M22.75 14.7661C25.8911 14.7661 28.4375 12.2197 28.4375 9.07861C28.4375 5.93749 25.8911 3.39111 22.75 3.39111M23.1875 20.8911H23.4062C28.1179 20.8911 31.9375 24.7107 31.9375 29.4224C31.9375 30.9929 30.6643 32.2661 29.0938 32.2661H26.25M17.9375 9.07861C17.9375 12.2197 15.3911 14.7661 12.25 14.7661C9.10888 14.7661 6.5625 12.2197 6.5625 9.07861C6.5625 5.93749 9.10888 3.39111 12.25 3.39111C15.3911 3.39111 17.9375 5.93749 17.9375 9.07861ZM5.90625 32.2661H18.5938C20.1643 32.2661 21.4375 30.9929 21.4375 29.4224C21.4375 24.7107 17.6179 20.8911 12.9062 20.8911H11.5938C6.88207 20.8911 3.0625 24.7107 3.0625 29.4224C3.0625 30.9929 4.33569 32.2661 5.90625 32.2661Z" stroke="#00C2FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -102,11 +103,11 @@
                                     <span>100</span>
                                 </div>
                                 <label class="box__label">
-                                    <i class="fa-solid fa-arrow-trend-up label__icon"></i> 5% vs last month
+                                    <i class="fa-solid fa-arrow-trend-up label__icon"></i> 5% so với tháng trước
                                 </label>
                             </div>
                             <div class="spec__item flex">
-                                <div class="spec__title">Member customers</div>
+                                <div class="spec__title">Thành viên</div>
                                 <div class="hightlight__content">
                                     <svg width="35" height="36" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M22.75 14.7661C25.8911 14.7661 28.4375 12.2197 28.4375 9.07861C28.4375 5.93749 25.8911 3.39111 22.75 3.39111M23.1875 20.8911H23.4062C28.1179 20.8911 31.9375 24.7107 31.9375 29.4224C31.9375 30.9929 30.6643 32.2661 29.0938 32.2661H26.25M17.9375 9.07861C17.9375 12.2197 15.3911 14.7661 12.25 14.7661C9.10888 14.7661 6.5625 12.2197 6.5625 9.07861C6.5625 5.93749 9.10888 3.39111 12.25 3.39111C15.3911 3.39111 17.9375 5.93749 17.9375 9.07861ZM5.90625 32.2661H18.5938C20.1643 32.2661 21.4375 30.9929 21.4375 29.4224C21.4375 24.7107 17.6179 20.8911 12.9062 20.8911H11.5938C6.88207 20.8911 3.0625 24.7107 3.0625 29.4224C3.0625 30.9929 4.33569 32.2661 5.90625 32.2661Z" stroke="url(#paint0_linear_887_9425)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -120,11 +121,11 @@
                                     <span>50</span>
                                 </div>
                                 <label class="box__label">
-                                    <i class="fa-solid fa-arrow-trend-up label__icon"></i> 5% vs last month
+                                    <i class="fa-solid fa-arrow-trend-up label__icon"></i> 5% so với tháng trước
                                 </label>
                             </div>
                             <div class="spec__item flex">
-                                <div class="spec__title">Regular customers</div>
+                                <div class="spec__title">Thường xuyên</div>
                                 <div class="hightlight__content">
                                     <svg width="35" height="35" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path style="width: 100% ; height: 100%" d="M22.75 14.7661C25.8911 14.7661 28.4375 12.2197 28.4375 9.07861C28.4375 5.93749 25.8911 3.39111 22.75 3.39111M23.1875 20.8911H23.4062C28.1179 20.8911 31.9375 24.7107 31.9375 29.4224C31.9375 30.9929 30.6643 32.2661 29.0938 32.2661H26.25M17.9375 9.07861C17.9375 12.2197 15.3911 14.7661 12.25 14.7661C9.10888 14.7661 6.5625 12.2197 6.5625 9.07861C6.5625 5.93749 9.10888 3.39111 12.25 3.39111C15.3911 3.39111 17.9375 5.93749 17.9375 9.07861ZM5.90625 32.2661H18.5938C20.1643 32.2661 21.4375 30.9929 21.4375 29.4224C21.4375 24.7107 17.6179 20.8911 12.9062 20.8911H11.5938C6.88207 20.8911 3.0625 24.7107 3.0625 29.4224C3.0625 30.9929 4.33569 32.2661 5.90625 32.2661Z" stroke="#FF9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -132,7 +133,7 @@
                                     <span>100</span>
                                 </div>
                                 <label class="box__label">
-                                    <i class="fa-solid fa-arrow-trend-up label__icon"></i> 5% vs last month
+                                    <i class="fa-solid fa-arrow-trend-up label__icon"></i> 5% so với tháng trước
                                 </label>
                             </div>
                         </div>
@@ -140,7 +141,7 @@
                 </div>
                 <div class="bottom__box">
                     <div class="box__item transactions">
-                        <h2 class="box__title">Transactions <a href="" class="box-detail__btn">Detail</a></h2>
+                        <h2 class="box__title">Giao dịch <a href="" class="box-detail__btn">Chi tiết</a></h2>
                         <div class="transactions__wrapper item__wrapper">
                             <div class="transaction__item">
                                 <div class="flex" style="gap: 12px">
@@ -156,7 +157,7 @@
                                     </div>
                                 </div>
                                 <div class="item__detail" style="text-align: right;">
-                                    <h6 class="item__status masking-text">Completed</h6>
+                                    <h6 class="item__status masking-text">Thành công</h6>
                                     <label for="" class="item__label">CHFD12KAKDF9</label>
                                 </div>
                             </div>
@@ -174,7 +175,7 @@
                                     </div>
                                 </div>
                                 <div class="item__detail" style="text-align: right;">
-                                    <h6 class="item__status delivering">Delivering</h6>
+                                    <h6 class="item__status delivering">Đang giao</h6>
                                     <label for="" class="item__label">CHFD12KAKDF9</label>
                                 </div>
                             </div>
@@ -192,7 +193,7 @@
                                     </div>
                                 </div>
                                 <div class="item__detail" style="text-align: right;">
-                                    <h6 class="item__status cancelled">Cancelled</h6>
+                                    <h6 class="item__status cancelled">Đã hủy</h6>
                                     <label for="" class="item__label">CHFD12KAKDF9</label>
                                 </div>
                             </div>
@@ -210,14 +211,14 @@
                                     </div>
                                 </div>
                                 <div class="item__detail" style="text-align: right;">
-                                    <h6 class="item__status return">Return</h6>
+                                    <h6 class="item__status return">Hoàn trả</h6>
                                     <label for="" class="item__label">CHFD12KAKDF9</label>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="box__item customers">
-                        <h2 class="box__title">Customers <a href="" class="box-detail__btn">Detail</a></h2>
+                        <h2 class="box__title">Khách hàng <a href="" class="box-detail__btn">Chi tiết</a></h2>
                         <div class="customers__wrapper item__wrapper">
                             <!-- single customer start -->
                             <div class="customer">
@@ -228,7 +229,7 @@
                                             <h4 class="detail__name">Leslie Alexander</h4>
                                             <label for="" class="customer__type masking-text">Member</label>
                                         </div>
-                                        <p class="customer__id">ID: 00246</p>
+                                        <p class="customer__id">ID: 00246</p>   
                                     </div>
                                 </div>
                                 <div class="customer__right customer__detail">
